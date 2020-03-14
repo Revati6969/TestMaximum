@@ -1,12 +1,24 @@
 public class FindMaximum {
 
-    public static Integer maximumInteger(Integer firstValue, Integer secondValue, Integer thirdValue) {
-        Integer maximumValue = firstValue;
-        if(secondValue.compareTo(maximumValue) > 0)
-            maximumValue = secondValue;
-        if (thirdValue.compareTo(maximumValue) > 0)
-            maximumValue = thirdValue;
-        return maximumValue;
-    }
+    //Maximum form three integers
+    public static Integer maximumInteger(Integer first, Integer second, Integer third) {
+        Integer maximum = first;
 
+        if(second.compareTo(maximum) > 0)
+            maximum = second; //second is larger
+        if (third.compareTo(maximum) > 0)
+            maximum = third; //third is larger
+        return maximum;
+    }
+    //Maximum from floats
+    public static Float maximumFloat(Float first, Float second, Float third) {
+        Float maximum = first;
+
+        if(second.compareTo(maximum) > 0)
+            maximum = second;//second is larger
+        if (third.compareTo(maximum) > 0)
+            maximum = third;//third is larger
+        return maximum;
+
+    }
 }
