@@ -5,10 +5,23 @@ public class TestMaximum {
     FindMaximum maximum;
 
     @Test
-    public void givenIntegers_WhenProper_ReturnMaximum() {
+    public void givenIntegers_WhenMaxAtOne_ReturnMaximum() {
         maximum = new FindMaximum();
-        Integer[] array = {4, 7, 2};
-        Integer maxIntegers = maximum.maximumInteger(array);
-        Assert.assertEquals(7, (int) maxIntegers);
+        int maxIntegers = maximum.maximumInteger(5, 2, 3);
+        Assert.assertEquals(5, maxIntegers);
+    }
+
+    @Test
+    public void givenIntegers_WhenMaxAtTwo_ReturnMaximum() {
+        maximum = new FindMaximum();
+        int maxIntegers = maximum.maximumInteger(2, 5, 3);
+        Assert.assertEquals(5, maxIntegers);
+    }
+
+    @Test
+    public void givenIntegers_WhenMaxAtThree_ReturnMaximum() {
+        maximum = new FindMaximum();
+        int maxIntegers = maximum.maximumInteger(3, 3, 5);
+        Assert.assertEquals(5, maxIntegers);
     }
 }

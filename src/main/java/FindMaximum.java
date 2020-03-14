@@ -1,13 +1,12 @@
 public class FindMaximum {
 
-    public Integer maximumInteger(Integer[] array) {
-        Integer maximum = 0;
-        for(Integer integer: array)
-        {
-            if(integer.compareTo(maximum)>0)
-                maximum = integer;
-        }
-        return maximum;
+    public static Integer maximumInteger(Integer firstValue, Integer secondValue, Integer thirdValue) {
+        Integer maximumValue = firstValue;
+        if(secondValue.compareTo(maximumValue) > 0)
+            maximumValue = secondValue;
+        if (thirdValue.compareTo(maximumValue) > 0)
+            maximumValue = thirdValue;
+        return maximumValue;
     }
 
 }
