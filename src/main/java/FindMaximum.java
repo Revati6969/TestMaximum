@@ -1,7 +1,21 @@
-public class FindMaximum {
-    //Find maximum from all three different datatypes
-    public static <E extends Comparable> E checkMaximum(E first, E second, E third) {
+public class FindMaximum<E extends Comparable> {
 
+    E first;
+    E second;
+    E third;
+
+    public FindMaximum(E first, E second, E third) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
+    }
+
+    public E checkMaximum() {
+        return checkMaximum(first,second, third);
+    }
+
+
+    public static <E extends Comparable> E checkMaximum(E first, E second, E third) {
         E maximum = first;
 
         if (second.compareTo(maximum) > 0)
